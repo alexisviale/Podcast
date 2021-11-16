@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    overflow-x: hidden;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0 100px;
+    /*background-color: lightpink;
+    border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    
+}
+
+.menu ul li a {
+    margin-left: 30px;
+    font-family: "IBM plex mono";
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #060a24;
+    
+}
+
+.menu ul li a:hover {
+    text-decoration: line-through;
+    color: #00f3bb;
+}
+
+.menu ul li a:active {
+    color: #060A24;
+    opacity: 56%;
+}
+
+#hamburguesa {
+    display: none;
+  }
+
+  .menu-mobile {
+      display: none;
+  }
+
+  .nav-menu-mobile li {
+    list-style-type: none;
+    background-color: blue;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-menu-mobile li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    font-family: "IBM plex mono", monospace;
+    font-weight: 300;
+  }
+
+  .nav-menu-mobile li a:active {
+    color: #060A24;
+    opacity: 56%;
+  }
+
+  .nav-menu-mobile {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 100%;
+  }
+
+  /* Botón hamburguesa */
+
+  label span {
+    position: relative;
+    display: block;
+    width: 18px;
+    background-color: black;
+    height: 2px;
+    margin-bottom: 3px;
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease,
+      -webkit-transform 0.3s ease;
+  }
+
+  span:last-child {
+    margin-bottom: 0px;
+  }
+
+  input:checked ~ label span {
+    margin-bottom: 0px;
+  }
+
+  input:checked ~ label span:first-child {
+    transform: top 0.3s;
+    transition: 0.3s ease-in-out;
+    top: 4px;
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  input:checked ~ label span:nth-child(3) {
+    transform: rotate(-45deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  input:checked ~ label span:nth-child(2) {
+    opacity: 1%;
+    transition: 0.3s ease-in-out;
+  }
+  
+
+
+@media screen and (max-width: 850px) {
+    .header {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .menu ul {
+        display: none;
+    }
+
+    .header {
+        height: 44px;
+        padding: 0 16px;
+    }
+
+    .header img {
+        width: 24px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    #hamburguesa ~ .nav-menu-mobile {
+      max-width: 0%;
+      overflow: hidden;
+      transform: translatex(100%);
+      transition: 0.3s ease-out;
+
+    }
+
+    #hamburguesa:checked ~ .nav-menu-mobile {
+        transform: translatex(0%);
+        transform: display 0.3s;
+        transition: 0.3s ease-out;
+        max-width: 100%;
+      }
+
+}

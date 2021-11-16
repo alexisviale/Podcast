@@ -1,0 +1,45 @@
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
+    margin: 0 100px 0 100px;
+  }
+
+  .contenedor-footer .text-footer {
+    font-family: "IBM plex mono";
+    font-size: 16px;
+  }
+
+  .contenedor-footer .logo-redes a {
+    text-decoration: none;
+    padding-left: 36px;
+  }
+
+  .contenedor-footer .logo-redes a:first-child {
+    padding-left: 0px;
+  }
+
+  .contenedor-footer .logo-redes a svg:hover {
+    fill: #00f3bb;
+  }
+
+  svg {
+      width: 16px;
+      height: 16px;
+  }
+
+  @media screen and (max-width: 750px) {
+    .contenedor-footer {
+      justify-content: center;
+      flex-direction: column;
+      margin: 0px 20px 0px 20px;
+    }
+
+    .contenedor-footer .text-footer {
+      font-size: 14px;
+      padding-bottom: 16px;
+
+    }
+  }

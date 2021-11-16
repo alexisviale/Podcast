@@ -1,0 +1,43 @@
+.cont-entrevistas {
+    margin-top: -100px;
+}
+.tit-entrevistas {
+    margin-left: 200px;
+    font-size: 48px;
+    line-height: 62px;
+    font-family: "IBM plex sans";
+    font-weight: 400;
+    margin-bottom: 36px;
+    color: #060A24;
+  }
+
+  .fotos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fotos img {
+    width: 33.3%;
+  }
+
+  @media screen and (max-width: 900px) {
+    .fotos img {
+      width: 50%;
+    }
+    .tit-entrevistas {
+      margin-left: 20px;
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .fotos img {
+      width: 100%;
+    }
+
+    .tit-entrevistas {
+      line-height: 42px;
+      margin-bottom: 16px;
+    }
+  }

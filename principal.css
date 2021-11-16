@@ -1,0 +1,113 @@
+.titulo {
+    display: block;
+}
+
+.titulo h1 {
+    font-family: "IBM plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: #060A24;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.azul {
+    color: #0000EC;
+}
+
+.parrafo1 {
+    /*height: 48px;*/
+    display: block;
+    width: 628px;
+}
+
+.parrafo1 p {
+    font-family: "IBM plex mono";
+    font-size: 16px;
+    color: #060A24;
+    line-height: 24px;
+}
+
+.principal {
+    margin-left: 200px;
+    margin-top: 120px;
+    margin-right: 200px;
+    width: auto;
+}
+
+.principal .boton button {
+    width: 226px;
+    height: 56px;
+    background-color: #00F3BB;
+    color: #060A24;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "IBM plex mono";
+    margin-top: 56px;
+    border: none;
+}
+
+.principal .boton button:hover {
+    color: white;
+    background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+@media screen and (max-width: 850px) {
+
+    .principal {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .principal {
+        margin-top: 29px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .titulo {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .boton {
+        width: 100%;
+        /*background-color: tomato;*/
+        display: flex;
+    }
+
+    .principal .boton button {
+        margin-left: auto;
+        margin-right: auto;
+        height: 44px;
+        margin-top: 36px;
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .parrafo1 {
+        display: flex;
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .parrafo1 p {
+        font-size: 14px;
+    }
+
+    .titulo h1 {
+
+        font-size: 36px;
+
+    }
+
+}
